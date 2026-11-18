@@ -30,6 +30,23 @@ The application uses client-side routes and a data-driven project catalog. It is
 
 The certificate gallery currently links to the owner's LinkedIn profile rather than inventing individual certificate records. The CV is rendered as a web page and can be printed to PDF after its contents have been reviewed.
 
+## Portfolio visitor journey
+
+```mermaid
+flowchart TD
+    A["Visitor enters portfolio"] --> B["Home and profile introduction"]
+    B --> C{"Choose a destination"}
+    C --> D["Projects and case studies"]
+    C --> E["Professional background"]
+    C --> F["Certificates"]
+    C --> G["Print-ready CV"]
+    C --> H["Contact"]
+    D --> I["Open repository or project details"]
+    E --> H
+    F --> H
+    G --> H
+```
+
 ## Technology
 
 | Area | Technology |
