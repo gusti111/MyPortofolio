@@ -1,66 +1,129 @@
-# Gusty Faqikh — Personal Portfolio
+<div align="center">
 
-React + TypeScript + Vite + Tailwind CSS portfolio, prepared for Firebase Hosting.
+# GUSTY FAQIKH — PERSONAL PORTFOLIO
+
+**A responsive developer portfolio built with React, TypeScript, and Vite.**
+
+Project case studies · Profile · Certificates · Print-ready CV
+
+</div>
+
+---
+
+## Overview
+
+This repository contains a personal portfolio website designed to present software projects, professional background, and contact information through a structured, responsive interface.
+
+The application uses client-side routes and a data-driven project catalog. It is prepared for deployment to Firebase Hosting, with the production build served from the Vite dist directory.
+
+## Experience
+
+- Responsive navigation and page routing.
+- Indonesian and English interface toggle.
+- Light, dark, and system theme preferences.
+- Project search, category filtering, and project detail routes.
+- Keyboard command palette using Ctrl/Cmd + K.
+- Certificate media gallery with a LinkedIn credentials destination.
+- Print-ready CV page with browser Print / Save as PDF support.
+- Contact links and copy-email interaction.
+- Visible keyboard-focus states and reduced-motion support.
+
+The certificate gallery currently links to the owner's LinkedIn profile rather than inventing individual certificate records. The CV is rendered as a web page and can be printed to PDF after its contents have been reviewed.
+
+## Technology
+
+| Area | Technology |
+| --- | --- |
+| UI | React 18 |
+| Language | TypeScript |
+| Build tool | Vite 6 |
+| Routing | React Router 6 |
+| Styling | Tailwind CSS 3 |
+| Icons | Lucide React |
+| Hosting target | Firebase Hosting |
 
 ## Requirements
-- Node.js 20.19+ or 22.12+
-- npm
-- Firebase CLI only for deployment
 
-## Run locally
-```bash
-npm install
-npm run dev
-```
+- Node.js 20.19+ or 22.12+.
+- npm.
+- Firebase CLI only for deployment.
 
-## Validate
-```bash
-npm run typecheck
-npm run build
-npm run preview
-```
+## Getting started
 
-## Deploy to Firebase Hosting
+    git clone https://github.com/gusti111/MyPortofolio.git
+    cd MyPortofolio
+    npm install
+    npm run dev
+
+## Quality checks
+
+Run the TypeScript project check:
+
+    npm run typecheck
+
+Create a production build:
+
+    npm run build
+
+Preview the generated build:
+
+    npm run preview
+
+## Firebase Hosting deployment
+
 1. Create a Firebase project in the Firebase Console.
-2. Install Firebase CLI: `npm install -g firebase-tools`
-3. Authenticate: `firebase login`
-4. Copy `.firebaserc.example` to `.firebaserc` and replace the project ID.
-5. Run `firebase use YOUR_FIREBASE_PROJECT_ID`
-6. Run `npm run build`
-7. Run `firebase deploy --only hosting`
+2. Install and authenticate the Firebase CLI.
+3. Copy .firebaserc.example to .firebaserc and replace the project ID.
+4. Select the intended Firebase project.
+5. Build the application.
+6. Deploy the Hosting target.
 
-Firebase Hosting serves the production build from `dist/`. The rewrite supports client-side routes.
+    npm install -g firebase-tools
+    firebase login
+    npm run build
+    firebase deploy --only hosting
 
-## Included functionality
-- Responsive navigation and route handling
-- Indonesian / English interface toggle
-- Light / dark / system theme preference
-- Project search and category filtering
-- Project detail routes
-- Keyboard command palette (`Ctrl/Cmd + K`)
-- Certificate media gallery with LinkedIn credentials destination
-- CV page with browser print / Save as PDF action
-- Contact links and copy-email action
-- Accessible focus styles and reduced-motion support
+Firebase Hosting serves the production output from dist/. Review firebase.json and project aliases before deploying.
 
-## Owner content to verify before public launch
-This package uses only details previously provided by the owner. Please verify:
-- GPA is currently 3.84/4.00.
-- Study period and expected graduation date.
-- Smart Computer internship dates and description.
-- Organization role and period.
-- Project descriptions, technology stacks, and current implementation status.
-- Exact project repository URLs.
-- Certificate titles, issuer names, and credential URLs.
+## Project structure
 
-The certifications page currently links to the owner's LinkedIn profile rather than fabricating individual credential records. Add verified certificate files to `public/certificates/` and update `src/data/portfolio.ts` to show individual items when supplied.
+    MyPortofolio/
+    ├── public/
+    │   └── assets/       # Favicon, social card, project artwork
+    ├── src/
+    │   ├── App.tsx
+    │   ├── data/
+    │   │   └── portfolio.ts
+    │   ├── styles.css
+    │   └── main.tsx
+    ├── design/
+    ├── DESIGN-SYSTEM.md
+    ├── QA-REPORT.md
+    ├── firebase.json
+    └── package.json
 
-The CV page is a print-ready web CV, not a fabricated uploaded PDF. Use its Print / Save PDF action to export a PDF, then replace the content after reviewing all details.
+Portfolio content and project metadata are maintained in src/data/portfolio.ts.
+
+## Content accuracy checklist
+
+Before publishing the portfolio, verify all owner-controlled content:
+
+- Education details, study dates, GPA, and expected graduation information.
+- Internship dates and role descriptions.
+- Project summaries, technology stacks, role attribution, and repository links.
+- Certificate names, issuing organizations, and credential destinations.
+- Contact information and external profile URLs.
+
+Do not publish unverified achievements or imply that a prototype is a production deployment.
 
 ## Design assets
-`public/assets/` contains original SVG brand and social preview assets. SVG files are editable in Figma, Illustrator, Inkscape, or a text editor.
 
-## Notes
-- No authentication, payments, analytics, or backend are required.
-- Do not upload confidential data or screenshots containing personal/student information.
-- No third-party tracking scripts are included.
+The public/assets directory contains original SVG brand and project assets. They can be edited using a vector editor or directly as SVG source.
+
+## Project status
+
+A personal portfolio front end prepared for Firebase Hosting. No authentication, payment processing, analytics service, or application database is required by the current implementation.
+
+## Author
+
+**Gusty Faqikh** · [GitHub](https://github.com/gusti111) · [LinkedIn](https://www.linkedin.com/in/gusty-faqikh/)
